@@ -28,9 +28,9 @@ function Todo({ setIsDarkMode, isDarkMode }) {
     for (let i = 0; i < allTodos.length; i++) {
       if (allTodos[i].active === true) {
         count++;
-        setActiveTodos((active) => [allTodos[i], ...active]);
+        setActiveTodos((active) => [...active, allTodos[i]]);
       } else {
-        setCompletedTodos((completed) => [allTodos[i], ...completed]);
+        setCompletedTodos((completed) => [...completed, allTodos[i]]);
       }
     }
     setItemsLeft(count);
